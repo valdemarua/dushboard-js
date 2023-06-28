@@ -1,11 +1,9 @@
+import { blue, green } from "@mui/material/colors";
+
 export const themeConfig = {
   palette: {
-    primary: {
-      main: "#2e7d32",
-    },
-    secondary: {
-      main: "#ed6c02",
-    },
+    primary: blue,
+    secondary: green,
   },
   // typography: {
   //   fontSize: 15,
