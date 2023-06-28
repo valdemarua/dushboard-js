@@ -1,1 +1,1 @@
-export { themeConfig } from './src/themes/config'
+export { themeConfig } from './src/themes/config.js'

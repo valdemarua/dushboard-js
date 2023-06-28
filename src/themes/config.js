@@ -1,4 +1,4 @@
-export default themeConfig = {
+export const themeConfig = {
   palette: {
     primary: "blue",
     secondary: "green",
