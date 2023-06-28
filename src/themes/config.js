@@ -16,6 +16,11 @@ export const themeConfig = {
   //     marginBottom: "1rem",
   //   },
   // },
+  typography: {
+    button: {
+      textTransform: 'capitalize',
+    }
+  },
   components: {
     MuiButtonBase: {
       defaultProps: {
