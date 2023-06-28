@@ -1,10 +1,10 @@
 export const themeConfig = {
   palette: {
     primary: {
-      main: "blue",
+      main: "#2e7d32",
     },
     secondary: {
-      main: "green",
+      main: "#ed6c02",
     },
   },
   // typography: {
