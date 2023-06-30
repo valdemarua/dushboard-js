@@ -28,7 +28,7 @@ export default [
   },
   {
     input: "dist/esm/types/index.d.ts",
-    output: [{ file: "dist/index.d.ts", fomat: "esm"}],
-    plugins: [dts()],
+    output: [{ file: "dist/index.d.ts", fomat: "es"}],
+    plugins: [dts.default()],
   }
 ]
