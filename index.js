@@ -1,3 +1,3 @@
-export { themeConfig } from './src/themes/config.js'
-export { ThemeProvider} from './src/themes/ThemeProvider.js'
+export { themeConfig } from './src/themes/config'
+export { ThemeProvider} from './src/themes/ThemeProvider'
 export * from './src/components'
