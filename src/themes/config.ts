@@ -8,11 +8,11 @@ declare module '@mui/material/styles' {
     };
   }
   // allow configuration using `createTheme`
-  // interface ThemeOptions {
-  //   status?: {
-  //     danger?: string;
-  //   };
-  // }
+  interface ThemeOptions {
+    status?: {
+      danger?: string;
+    };
+  }
 }
 
 export const themeConfig: ThemeOptions = {
@@ -38,6 +38,11 @@ export const themeConfig: ThemeOptions = {
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
+      }
+    },
+    MuiButton: {
+      defaultProps: {
+        variant: "contained"
       }
     }
   }

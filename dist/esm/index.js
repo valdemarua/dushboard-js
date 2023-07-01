@@ -31,6 +31,11 @@ const themeConfig = {
             defaultProps: {
                 disableRipple: true,
             }
+        },
+        MuiButton: {
+            defaultProps: {
+                variant: "contained"
+            }
         }
     }
 };

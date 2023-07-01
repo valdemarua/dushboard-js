@@ -19,6 +19,11 @@ declare module '@mui/material/styles' {
             danger: string;
         };
     }
+    interface ThemeOptions {
+        status?: {
+            danger?: string;
+        };
+    }
 }
 declare const themeConfig: ThemeOptions;
 
