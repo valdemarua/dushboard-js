@@ -1,4 +1,5 @@
 import { blue, green } from "@mui/material/colors";
+import { ThemeOptions } from "@mui/material/styles/createTheme";
 
 declare module '@mui/material/styles' {
   interface Theme {
@@ -7,14 +8,14 @@ declare module '@mui/material/styles' {
     };
   }
   // allow configuration using `createTheme`
-  interface ThemeOptions {
-    status?: {
-      danger?: string;
-    };
-  }
+  // interface ThemeOptions {
+  //   status?: {
+  //     danger?: string;
+  //   };
+  // }
 }
 
-export const themeConfig = {
+export const themeConfig: ThemeOptions = {
   palette: {
     primary: blue,
     secondary: green,

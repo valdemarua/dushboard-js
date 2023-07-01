@@ -6,8 +6,11 @@ interface ThemeProps {
   children?: ReactNode;
 }
 
+const theme = createTheme(themeConfig);
+
 export default function ThemeProvider({children}: ThemeProps) {
+
   return (
-      <MUIThemeProvider theme={themeConfig}>{children}</MUIThemeProvider>
+      <MUIThemeProvider theme={theme}>{children}</MUIThemeProvider>
       )
 }

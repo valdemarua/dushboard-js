@@ -1,6 +1,6 @@
 import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
 import { Typography } from '@mui/material';
-import { ThemeProvider as ThemeProvider$1 } from '@mui/material/styles';
+import { createTheme, ThemeProvider as ThemeProvider$1 } from '@mui/material/styles';
 import { blue, green } from '@mui/material/colors';
 
 const Page = ({ title, children }) => {
@@ -35,8 +35,9 @@ const themeConfig = {
     }
 };
 
+const theme = createTheme(themeConfig);
 function ThemeProvider({ children }) {
-    return (jsx(ThemeProvider$1, { theme: themeConfig, children: children }));
+    return (jsx(ThemeProvider$1, { theme: theme, children: children }));
 }
 
 export { Page, ThemeProvider, themeConfig };
