@@ -7,7 +7,7 @@ interface PageProps {
 }
 
 const Page = ({title, children}: PageProps) => {
-  return <><Typography variant="h2">{title}</Typography><Box>{children}</Box></>
+  return <><div>{title}</div><div>{children}</div></>
 }
 
 export default Page;
