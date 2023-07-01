@@ -9892,7 +9892,7 @@ process.env.NODE_ENV !== "production" ? Box.propTypes /* remove-proptypes */ = {
 var Box$1 = Box;
 
 const Page = ({ title, children }) => {
-    return jsxRuntimeExports.jsxs(jsxRuntimeExports.Fragment, { children: [jsxRuntimeExports.jsx("div", { children: title }), jsxRuntimeExports.jsxs("div", { children: [jsxRuntimeExports.jsx(Box$1, { children: "test" }), children] })] });
+    return jsxRuntimeExports.jsxs("div", { children: [jsxRuntimeExports.jsx("div", { children: title }), jsxRuntimeExports.jsxs("div", { children: [jsxRuntimeExports.jsx(Box$1, { children: "test" }), children] })] });
 };
 
 exports.Page = Page;
