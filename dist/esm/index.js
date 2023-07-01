@@ -35,7 +35,15 @@ const themeConfig = {
         MuiButton: {
             defaultProps: {
                 variant: "contained"
-            }
+            },
+            styleOverrides: {
+                root: {
+                    boxShadow: 'none',
+                    ':hover, :focus': {
+                        boxShadow: 'none',
+                    },
+                },
+            },
         }
     }
 };
