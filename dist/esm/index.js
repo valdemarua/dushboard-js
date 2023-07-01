@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider as ThemeProvider$1 } from '@mui/material/sty
 import { blue, green } from '@mui/material/colors';
 
 const Page = ({ title, children }) => {
-    return jsxs(Fragment, { children: [jsx(Typography, { variant: "h2", children: title }), jsx("div", { children: children })] });
+    return (jsxs(Fragment, { children: [jsx(Typography, { variant: "h2", children: title }), jsx("div", { children: children })] }));
 };
 
 const themeConfig = {
@@ -23,34 +23,34 @@ const themeConfig = {
     // },
     typography: {
         button: {
-            textTransform: 'capitalize',
-        }
+            textTransform: "capitalize",
+        },
     },
     components: {
         MuiButtonBase: {
             defaultProps: {
                 disableRipple: true,
-            }
+            },
         },
         MuiButton: {
             defaultProps: {
-                variant: "contained"
+                variant: "contained",
             },
             styleOverrides: {
                 root: {
-                    boxShadow: 'none',
-                    ':hover, :focus': {
-                        boxShadow: 'none',
+                    boxShadow: "none",
+                    ":hover, :focus": {
+                        boxShadow: "none",
                     },
                 },
             },
-        }
-    }
+        },
+    },
 };
 
 const theme = createTheme(themeConfig);
 function ThemeProvider({ children }) {
-    return (jsx(ThemeProvider$1, { theme: theme, children: children }));
+    return jsx(ThemeProvider$1, { theme: theme, children: children });
 }
 
 export { Page, ThemeProvider, themeConfig };

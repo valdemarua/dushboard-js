@@ -1,5 +1,5 @@
 import { ThemeOptions } from "@mui/material/styles/createTheme";
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
     interface Theme {
         status: {
             danger: string;

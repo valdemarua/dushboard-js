@@ -6,8 +6,13 @@ interface PageProps {
   children?: ReactNode;
 }
 
-const Page = ({title, children}: PageProps) => {
-  return <><Typography variant="h2">{title}</Typography><div>{children}</div></>
-}
+const Page = ({ title, children }: PageProps) => {
+  return (
+    <>
+      <Typography variant="h2">{title}</Typography>
+      <div>{children}</div>
+    </>
+  );
+};
 
 export default Page;

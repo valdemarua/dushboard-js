@@ -1,7 +1,7 @@
 import { blue, green } from "@mui/material/colors";
 import { ThemeOptions } from "@mui/material/styles/createTheme";
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
   interface Theme {
     status: {
       danger: string;
@@ -31,28 +31,27 @@ export const themeConfig: ThemeOptions = {
   // },
   typography: {
     button: {
-      textTransform: 'capitalize',
-    }
+      textTransform: "capitalize",
+    },
   },
   components: {
     MuiButtonBase: {
       defaultProps: {
         disableRipple: true,
-      }
+      },
     },
     MuiButton: {
       defaultProps: {
-        variant: "contained"
+        variant: "contained",
       },
-            styleOverrides: {
+      styleOverrides: {
         root: {
-          boxShadow: 'none',
-          ':hover, :focus': {
-            boxShadow: 'none',
+          boxShadow: "none",
+          ":hover, :focus": {
+            boxShadow: "none",
           },
         },
       },
-
-    }
-  }
-}
+    },
+  },
+};

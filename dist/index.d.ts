@@ -13,7 +13,7 @@ interface ThemeProps {
 }
 declare function ThemeProvider({ children }: ThemeProps): react_jsx_runtime.JSX.Element;
 
-declare module '@mui/material/styles' {
+declare module "@mui/material/styles" {
     interface Theme {
         status: {
             danger: string;

@@ -1,6 +1,9 @@
-import {ReactNode} from "react"
-import { createTheme, ThemeProvider as MUIThemeProvider } from '@mui/material/styles';
-import {themeConfig} from "./config"
+import { ReactNode } from "react";
+import {
+  createTheme,
+  ThemeProvider as MUIThemeProvider,
+} from "@mui/material/styles";
+import { themeConfig } from "./config";
 
 interface ThemeProps {
   children?: ReactNode;
@@ -8,9 +11,6 @@ interface ThemeProps {
 
 const theme = createTheme(themeConfig);
 
-export default function ThemeProvider({children}: ThemeProps) {
-
-  return (
-      <MUIThemeProvider theme={theme}>{children}</MUIThemeProvider>
-      )
+export default function ThemeProvider({ children }: ThemeProps) {
+  return <MUIThemeProvider theme={theme}>{children}</MUIThemeProvider>;
 }
