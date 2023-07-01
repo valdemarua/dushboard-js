@@ -1,8 +1,8 @@
-import { jsxs, jsx } from 'react/jsx-runtime';
-import { Typography, Box } from '@mui/material';
+import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
+import { Typography } from '@mui/material';
 
 const Page = ({ title, children }) => {
-    return jsxs("div", { children: [jsx(Typography, { variant: "h2", children: title }), jsxs("div", { children: [jsx(Box, { children: "test" }), children] })] });
+    return jsxs(Fragment, { children: [jsx(Typography, { variant: "h2", children: title }), jsx("div", { children: children })] });
 };
 
 export { Page };
