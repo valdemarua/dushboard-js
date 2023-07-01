@@ -1,3 +1,4 @@
+import { Box, Typography } from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface PageProps {
@@ -6,7 +7,7 @@ interface PageProps {
 }
 
 const Page = ({title, children}: PageProps) => {
-  return <><div>{title}</div>{children}</>
+  return <><Typography variant="h2">{title}</Typography><Box>{children}</Box></>
 }
 
 export default Page;
