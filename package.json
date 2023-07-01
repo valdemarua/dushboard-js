@@ -1,8 +1,8 @@
 {
   "name": "dushboard-js",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Wrapper on top of MUI components",
-  "main": "dist/esm/index.js",
+  "main": "index.js",
   "scripts": {
     "rollup": "rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
