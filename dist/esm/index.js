@@ -1,5 +1,5 @@
 import { jsxs, Fragment, jsx } from 'react/jsx-runtime';
-import { Typography, Drawer, Toolbar, AppBar } from '@mui/material';
+import { Typography, AppBar, Toolbar, Drawer } from '@mui/material';
 import * as React from 'react';
 import emStyled from '@emotion/styled';
 import { ThemeContext } from '@emotion/react';
@@ -2524,16 +2524,16 @@ process.env.NODE_ENV !== "production" ? Box.propTypes /* remove-proptypes */ = {
 } : void 0;
 var Box$1 = Box;
 
+function Layout({ sidebarElement, children }) {
+    return (jsxs(Box$1, { sx: { display: "flex" }, children: [sidebarElement, jsxs(Box$1, { children: [jsx(AppBar, { position: "fixed", elevation: 0, children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: jsx(Box$1, { children: "asdf@asedf.com" }) }) }), jsx(Box$1, { children: jsxs(Box$1, { component: "main", sx: { p: 3 }, children: [jsx(Toolbar, {}), children] }) })] })] }));
+}
+
 const drawerWidth = 220;
 function Sidebar({ children, logoElement, width = drawerWidth, }) {
     return (jsx(Box$1, { sx: { display: "flex" }, children: jsxs(Drawer, { open: true, variant: "persistent", sx: {
                 width: width,
                 "& .MuiDrawer-paper": { width: width },
             }, children: [jsx(Toolbar, { children: logoElement }), jsx("hr", {}), children] }) }));
-}
-
-function Layout({ children }) {
-    return (jsxs(Box$1, { sx: { display: "flex" }, children: [jsx(Sidebar, {}), jsxs(Box$1, { children: [jsx(AppBar, { position: "fixed", elevation: 0, children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: jsx(Box$1, { children: "asdf@asedf.com" }) }) }), jsx(Box$1, { children: jsxs(Box$1, { component: "main", sx: { p: 3 }, children: [jsx(Toolbar, {}), children] }) })] })] }));
 }
 
 const themeConfig = {

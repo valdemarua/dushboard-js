@@ -5,12 +5,13 @@ import { Sidebar } from "./Sidebar";
 
 type LayoutProps = {
   children?: React.ReactNode;
+  sidebarElement?: React.ReactNode;
 };
 
-export function Layout({ children }: LayoutProps) {
+export function Layout({ sidebarElement, children }: LayoutProps) {
   return (
     <Box sx={{ display: "flex" }}>
-      <Sidebar />
+      {sidebarElement}
       <Box>
         <AppBar position="fixed" elevation={0}>
           <Toolbar disableGutters sx={{ pl: 2 }}>
