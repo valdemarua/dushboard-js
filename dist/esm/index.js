@@ -2524,17 +2524,16 @@ process.env.NODE_ENV !== "production" ? Box.propTypes /* remove-proptypes */ = {
 } : void 0;
 var Box$1 = Box;
 
-const drawerWidth$1 = 220;
-function Sidebar({ children, logoElement, width = drawerWidth$1, }) {
+const drawerWidth = 220;
+function Sidebar({ children, logoElement, width = drawerWidth, }) {
     return (jsx(Box$1, { sx: { display: "flex" }, children: jsxs(Drawer, { open: true, variant: "persistent", sx: {
                 width: width,
                 "& .MuiDrawer-paper": { width: width },
             }, children: [jsx(Toolbar, { children: logoElement }), jsx("hr", {}), children] }) }));
 }
 
-const drawerWidth = 220;
 function Layout({ children }) {
-    return (jsxs(Box$1, { sx: { display: "flex" }, children: [jsx(Sidebar, {}), jsxs(Box$1, { children: [jsx(AppBar, { position: "fixed", elevation: 0, sx: { width: `calc(100% - ${drawerWidth}px)`, ml: `{drawerWidth}px` }, children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: jsx(Box$1, { children: "asdf@asedf.com" }) }) }), jsx(Box$1, { children: jsxs(Box$1, { component: "main", sx: { p: 3 }, children: [jsx(Toolbar, {}), children] }) })] })] }));
+    return (jsxs(Box$1, { sx: { display: "flex" }, children: [jsx(Sidebar, {}), jsxs(Box$1, { children: [jsx(AppBar, { position: "fixed", elevation: 0, children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: jsx(Box$1, { children: "asdf@asedf.com" }) }) }), jsx(Box$1, { children: jsxs(Box$1, { component: "main", sx: { p: 3 }, children: [jsx(Toolbar, {}), children] }) })] })] }));
 }
 
 const themeConfig = {
