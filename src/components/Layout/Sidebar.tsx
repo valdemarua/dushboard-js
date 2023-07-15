@@ -18,8 +18,7 @@ export function Sidebar({ children, logo, width = 220 }: SidebarProps) {
           "& .MuiDrawer-paper": { width: width },
         }}
       >
-        <Toolbar>{logo}</Toolbar>
-        <hr />
+        {logo && <Toolbar>{logo}</Toolbar>}
         {children}
       </Drawer>
     </Box>

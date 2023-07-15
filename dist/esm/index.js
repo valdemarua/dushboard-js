@@ -15,7 +15,7 @@ function Sidebar({ children, logo, width = 220 }) {
     return (jsx(Box, { sx: { display: "flex" }, children: jsxs(Drawer, { open: true, variant: "persistent", sx: {
                 width: width,
                 "& .MuiDrawer-paper": { width: width },
-            }, children: [jsx(Toolbar, { children: logo }), jsx("hr", {}), children] }) }));
+            }, children: [logo && jsx(Toolbar, { children: logo }), children] }) }));
 }
 
 const themeConfig = {
