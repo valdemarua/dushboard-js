@@ -5,10 +5,10 @@ import React from "react";
 type SidebarProps = {
   children?: React.ReactNode;
   width?: number;
-  logoElement?: JSX.Element;
+  logo?: JSX.Element;
 };
 
-export function Sidebar({ children, logoElement, width = 220 }: SidebarProps) {
+export function Sidebar({ children, logo, width = 220 }: SidebarProps) {
   return (
     <Box sx={{ display: "flex" }}>
       <Drawer
@@ -19,7 +19,7 @@ export function Sidebar({ children, logoElement, width = 220 }: SidebarProps) {
           "& .MuiDrawer-paper": { width: width },
         }}
       >
-        <Toolbar>{logoElement}</Toolbar>
+        <Toolbar>{logo}</Toolbar>
         <hr />
         {children}
       </Drawer>

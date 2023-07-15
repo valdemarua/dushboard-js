@@ -18,9 +18,9 @@ declare function Layout({ sidebar, children, sidebarWidth }: LayoutProps): react
 type SidebarProps = {
     children?: React.ReactNode;
     width?: number;
-    logoElement?: JSX.Element;
+    logo?: JSX.Element;
 };
-declare function Sidebar({ children, logoElement, width }: SidebarProps): react_jsx_runtime.JSX.Element;
+declare function Sidebar({ children, logo, width }: SidebarProps): react_jsx_runtime.JSX.Element;
 
 interface ThemeProps {
     children?: ReactNode;
