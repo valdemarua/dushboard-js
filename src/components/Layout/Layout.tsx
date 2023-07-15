@@ -1,5 +1,4 @@
-import { AppBar, Toolbar } from "@mui/material";
-import { Box } from "@mui/system";
+import { AppBar, Box, Toolbar } from "@mui/material";
 import React, { ReactNode } from "react";
 
 type LayoutProps = {

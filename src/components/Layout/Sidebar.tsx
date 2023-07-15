@@ -1,5 +1,4 @@
-import { Drawer, Toolbar } from "@mui/material";
-import { Box } from "@mui/system";
+import { Drawer, Toolbar, Box } from "@mui/material";
 import React from "react";
 
 type SidebarProps = {
