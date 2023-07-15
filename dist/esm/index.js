@@ -2528,7 +2528,7 @@ function Layout({ sidebar, children, sidebarWidth = 220 }) {
     return (jsxs(Box$1, { sx: { display: "flex" }, children: [sidebar && sidebar, jsxs(Box$1, { children: [jsx(AppBar, { position: "fixed", elevation: 0, style: { marginLeft: sidebarWidth }, children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: jsx(Box$1, { children: "asdf@asedf.com" }) }) }), jsx(Box$1, { component: "main", sx: { paddingTop: "64px" }, children: children })] })] }));
 }
 
-function Sidebar({ children, logoElement, width }) {
+function Sidebar({ children, logoElement, width = 220 }) {
     return (jsx(Box$1, { sx: { display: "flex" }, children: jsxs(Drawer, { open: true, variant: "persistent", sx: {
                 width: width,
                 "& .MuiDrawer-paper": { width: width },

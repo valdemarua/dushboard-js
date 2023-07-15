@@ -4,11 +4,11 @@ import React from "react";
 
 type SidebarProps = {
   children?: React.ReactNode;
-  width: number;
+  width?: number;
   logoElement?: JSX.Element;
 };
 
-export function Sidebar({ children, logoElement, width }: SidebarProps) {
+export function Sidebar({ children, logoElement, width = 220 }: SidebarProps) {
   return (
     <Box sx={{ display: "flex" }}>
       <Drawer
