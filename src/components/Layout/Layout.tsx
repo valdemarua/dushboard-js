@@ -18,9 +18,8 @@ export function Layout({ sidebar, children, sidebarWidth = 220 }: LayoutProps) {
             <Box>asdf@asedf.com</Box>
           </Toolbar>
         </AppBar>
-        <Box component="main" sx={{ paddingTop: "64px" }}>
-          {children}
-        </Box>
+        <Toolbar />
+        <Box component="main">{children}</Box>
       </Box>
     </Box>
   );
