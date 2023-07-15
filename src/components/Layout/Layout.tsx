@@ -19,8 +19,7 @@ export function Layout({ sidebarElement, children }: LayoutProps) {
           </Toolbar>
         </AppBar>
         <Box>
-          <Box component="main" sx={{ p: 3 }}>
-            <Toolbar />
+          <Box component="main" sx={{ paddingTop: "64px" }}>
             {children}
           </Box>
         </Box>
