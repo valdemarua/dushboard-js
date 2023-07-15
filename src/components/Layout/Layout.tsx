@@ -4,14 +4,14 @@ import React, { ReactNode } from "react";
 
 type LayoutProps = {
   children?: React.ReactNode;
-  sidebar?: React.ReactNode;
+  sidebar?: JSX.Element;
   sidebarWidth?: number;
 };
 
 export function Layout({ sidebar, children, sidebarWidth = 220 }: LayoutProps) {
   return (
     <Box sx={{ display: "flex" }}>
-      {sidebar}
+      {sidebar && sidebar}
       <Box>
         <AppBar
           position="fixed"

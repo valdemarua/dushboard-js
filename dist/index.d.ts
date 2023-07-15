@@ -10,7 +10,7 @@ declare const Page: ({ title, children }: PageProps) => react_jsx_runtime.JSX.El
 
 type LayoutProps = {
     children?: React.ReactNode;
-    sidebar?: React.ReactNode;
+    sidebar?: JSX.Element;
     sidebarWidth?: number;
 };
 declare function Layout({ sidebar, children, sidebarWidth }: LayoutProps): react_jsx_runtime.JSX.Element;
