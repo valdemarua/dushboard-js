@@ -1,27 +1,29 @@
 import { AppBar, Toolbar } from "@mui/material";
 import { Box } from "@mui/system";
-import React from "react";
-import { Sidebar } from "./Sidebar";
+import React, { ReactNode } from "react";
 
 type LayoutProps = {
   children?: React.ReactNode;
-  sidebarElement?: React.ReactNode;
+  sidebar?: React.ReactNode;
+  sidebarWidth?: number;
 };
 
-export function Layout({ sidebarElement, children }: LayoutProps) {
+export function Layout({ sidebar, children, sidebarWidth = 220 }: LayoutProps) {
   return (
     <Box sx={{ display: "flex" }}>
-      {sidebarElement}
+      {sidebar}
       <Box>
-        <AppBar position="fixed" elevation={0}>
+        <AppBar
+          position="fixed"
+          elevation={0}
+          style={{ marginLeft: sidebarWidth }}
+        >
           <Toolbar disableGutters sx={{ pl: 2 }}>
             <Box>asdf@asedf.com</Box>
           </Toolbar>
         </AppBar>
-        <Box>
-          <Box component="main" sx={{ paddingTop: "64px" }}>
-            {children}
-          </Box>
+        <Box component="main" sx={{ paddingTop: "64px" }}>
+          {children}
         </Box>
       </Box>
     </Box>

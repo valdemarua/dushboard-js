@@ -10,16 +10,17 @@ declare const Page: ({ title, children }: PageProps) => react_jsx_runtime.JSX.El
 
 type LayoutProps = {
     children?: React.ReactNode;
-    sidebarElement?: React.ReactNode;
+    sidebar?: React.ReactNode;
+    sidebarWidth?: number;
 };
-declare function Layout({ sidebarElement, children }: LayoutProps): react_jsx_runtime.JSX.Element;
+declare function Layout({ sidebar, children, sidebarWidth }: LayoutProps): react_jsx_runtime.JSX.Element;
 
 type SidebarProps = {
     children?: React.ReactNode;
-    width?: number;
+    width: number;
     logoElement?: JSX.Element;
 };
-declare function Sidebar({ children, logoElement, width, }: SidebarProps): react_jsx_runtime.JSX.Element;
+declare function Sidebar({ children, logoElement, width }: SidebarProps): react_jsx_runtime.JSX.Element;
 
 interface ThemeProps {
     children?: ReactNode;
