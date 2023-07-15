@@ -13,11 +13,7 @@ export function Layout({ sidebar, children, sidebarWidth = 220 }: LayoutProps) {
     <Box sx={{ display: "flex" }}>
       {sidebar && sidebar}
       <Box>
-        <AppBar
-          position="fixed"
-          elevation={0}
-          style={{ marginLeft: sidebarWidth }}
-        >
+        <AppBar position="fixed" elevation={0} style={{ left: sidebarWidth }}>
           <Toolbar disableGutters sx={{ pl: 2 }}>
             <Box>asdf@asedf.com</Box>
           </Toolbar>
