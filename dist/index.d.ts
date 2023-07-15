@@ -1,5 +1,5 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { ThemeOptions } from '@mui/material/styles/createTheme';
 
 interface PageProps {
@@ -7,6 +7,18 @@ interface PageProps {
     children?: ReactNode;
 }
 declare const Page: ({ title, children }: PageProps) => react_jsx_runtime.JSX.Element;
+
+type LayoutProps = {
+    children?: React.ReactNode;
+};
+declare function Layout({ children }: LayoutProps): react_jsx_runtime.JSX.Element;
+
+type SidebarProps = {
+    children?: React.ReactNode;
+    width?: number;
+    logoElement?: JSX.Element;
+};
+declare function Sidebar({ children, logoElement, width, }: SidebarProps): react_jsx_runtime.JSX.Element;
 
 interface ThemeProps {
     children?: ReactNode;
@@ -27,4 +39,4 @@ declare module "@mui/material/styles" {
 }
 declare const themeConfig: ThemeOptions;
 
-export { Page, ThemeProvider, themeConfig };
+export { Layout, Page, Sidebar, ThemeProvider, themeConfig };
