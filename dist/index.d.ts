@@ -11,9 +11,10 @@ declare const Page: ({ title, children }: PageProps) => react_jsx_runtime.JSX.El
 type LayoutProps = {
     children?: React.ReactNode;
     sidebar?: JSX.Element;
+    appbar?: JSX.Element;
     sidebarWidth?: number;
 };
-declare function Layout({ sidebar, children, sidebarWidth }: LayoutProps): react_jsx_runtime.JSX.Element;
+declare function Layout({ sidebar, appbar, children, sidebarWidth, }: LayoutProps): react_jsx_runtime.JSX.Element;
 
 type SidebarProps = {
     children?: React.ReactNode;
@@ -21,6 +22,11 @@ type SidebarProps = {
     logo?: JSX.Element;
 };
 declare function Sidebar({ children, logo, width }: SidebarProps): react_jsx_runtime.JSX.Element;
+
+type AppBarProps = {
+    children?: React.ReactNode;
+};
+declare function AppBar({ children, ...rest }: AppBarProps): react_jsx_runtime.JSX.Element;
 
 interface ThemeProps {
     children?: ReactNode;
@@ -41,4 +47,4 @@ declare module "@mui/material/styles" {
 }
 declare const themeConfig: ThemeOptions;
 
-export { Layout, Page, Sidebar, ThemeProvider, themeConfig };
+export { AppBar, Layout, Page, Sidebar, ThemeProvider, themeConfig };

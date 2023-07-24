@@ -1,23 +1,25 @@
 import { AppBar, Box, Toolbar } from "@mui/material";
-import React, { ReactNode } from "react";
+import React from "react";
 
 type LayoutProps = {
   children?: React.ReactNode;
   sidebar?: JSX.Element;
+  appbar?: JSX.Element;
   sidebarWidth?: number;
 };
 
-export function Layout({ sidebar, children, sidebarWidth = 220 }: LayoutProps) {
+export function Layout({
+  sidebar,
+  appbar,
+  children,
+  sidebarWidth = 220,
+}: LayoutProps) {
   return (
     <Box sx={{ display: "flex" }}>
       {sidebar && sidebar}
       <Box>
-        <AppBar position="fixed" elevation={0} style={{ left: sidebarWidth }}>
-          <Toolbar disableGutters sx={{ pl: 2 }}>
-            <Box>asdf@asedf.com</Box>
-          </Toolbar>
-        </AppBar>
-        <Toolbar />
+        {appbar && appbar}
+        {appbar && <Toolbar />}
         <Box component="main">{children}</Box>
       </Box>
     </Box>
