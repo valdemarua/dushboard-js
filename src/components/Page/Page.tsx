@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { ReactNode } from "react";
 
 interface PageProps {
@@ -8,10 +8,10 @@ interface PageProps {
 
 const Page = ({ title, children }: PageProps) => {
   return (
-    <>
-      <Typography variant="h2">{title}</Typography>
+    <Box sx={{ p: 2 }}>
+      {title && <Typography variant="h2">{title}</Typography>}
       <div>{children}</div>
-    </>
+    </Box>
   );
 };
 
