@@ -1,5 +1,6 @@
 import * as react_jsx_runtime from 'react/jsx-runtime';
 import React, { ReactNode } from 'react';
+import { AppBarProps as AppBarProps$1 } from '@mui/material';
 import { ThemeOptions } from '@mui/material/styles/createTheme';
 
 interface PageProps {
@@ -23,9 +24,8 @@ type SidebarProps = {
 };
 declare function Sidebar({ children, logo, width }: SidebarProps): react_jsx_runtime.JSX.Element;
 
-type AppBarProps = {
-    children?: React.ReactNode;
-};
+interface AppBarProps extends AppBarProps$1 {
+}
 declare function AppBar({ children, ...rest }: AppBarProps): react_jsx_runtime.JSX.Element;
 
 interface ThemeProps {

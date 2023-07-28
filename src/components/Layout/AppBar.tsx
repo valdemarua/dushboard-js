@@ -1,9 +1,15 @@
-import { AppBar as MUIAppBar, Box, Toolbar } from "@mui/material";
+import {
+  AppBar as MUIAppBar,
+  AppBarProps as MUIAppBarProps,
+  Toolbar,
+} from "@mui/material";
 import React from "react";
 
-type AppBarProps = {
-  children?: React.ReactNode;
-};
+// type AppBarProps = {
+//   children?: React.ReactNode;
+// };
+
+interface AppBarProps extends MUIAppBarProps {}
 
 export function AppBar({ children, ...rest }: AppBarProps) {
   return (
