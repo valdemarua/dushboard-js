@@ -52,9 +52,14 @@ typeof SuppressedError === "function" ? SuppressedError : function (error, suppr
     return e.name = "SuppressedError", e.error = error, e.suppressed = suppressed, e;
 };
 
+const SIDEBAR_WIDTH = 220;
+
 function AppBar(_a) {
     var { children } = _a, rest = __rest(_a, ["children"]);
-    return (jsx(AppBar$1, Object.assign({ position: "fixed", elevation: 0 }, rest, { children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: children }) })));
+    return (jsx(AppBar$1, Object.assign({ position: "fixed", elevation: 0, sx: {
+            ml: SIDEBAR_WIDTH,
+            width: `calc(100% - ${SIDEBAR_WIDTH})`,
+        } }, rest, { children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: children }) })));
 }
 
 const themeConfig = {
