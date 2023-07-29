@@ -59,7 +59,11 @@ function AppBar(_a) {
     return (jsx(AppBar$1, Object.assign({ position: "fixed", elevation: 0, sx: {
             ml: `${SIDEBAR_WIDTH}px`,
             width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
-        } }, rest, { children: jsx(Toolbar, { disableGutters: true, sx: { px: 2, justifyContent: "space-between" }, children: children }) })));
+        } }, rest, { children: jsx(Toolbar, { disableGutters: true, sx: {
+                px: 2,
+                justifyContent: "space-between",
+                "& :only-child": { ml: "auto" },
+            }, children: children }) })));
 }
 
 const themeConfig = {

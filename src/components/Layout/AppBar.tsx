@@ -23,7 +23,14 @@ export function AppBar({ children, ...rest }: AppBarProps) {
       }}
       {...rest}
     >
-      <Toolbar disableGutters sx={{ px: 2, justifyContent: "space-between" }}>
+      <Toolbar
+        disableGutters
+        sx={{
+          px: 2,
+          justifyContent: "space-between",
+          "& :only-child": { ml: "auto" },
+        }}
+      >
         {children}
       </Toolbar>
     </MuiAppBar>
