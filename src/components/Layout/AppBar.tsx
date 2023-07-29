@@ -18,8 +18,8 @@ export function AppBar({ children, ...rest }: AppBarProps) {
       position="fixed"
       elevation={0}
       sx={{
-        ml: SIDEBAR_WIDTH,
-        width: `calc(100% - ${SIDEBAR_WIDTH})`,
+        ml: `${SIDEBAR_WIDTH}px`,
+        width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
       }}
       {...rest}
     >

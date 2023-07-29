@@ -57,8 +57,8 @@ const SIDEBAR_WIDTH = 220;
 function AppBar(_a) {
     var { children } = _a, rest = __rest(_a, ["children"]);
     return (jsx(AppBar$1, Object.assign({ position: "fixed", elevation: 0, sx: {
-            ml: SIDEBAR_WIDTH,
-            width: `calc(100% - ${SIDEBAR_WIDTH})`,
+            ml: `${SIDEBAR_WIDTH}px`,
+            width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
         } }, rest, { children: jsx(Toolbar, { disableGutters: true, sx: { pl: 2 }, children: children }) })));
 }
 

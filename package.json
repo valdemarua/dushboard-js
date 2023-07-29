@@ -1,6 +1,6 @@
 {
   "name": "dushboard-js",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Wrapper on top of MUI components",
   "main": "index.js",
   "scripts": {
