@@ -6,10 +6,6 @@ import {
 import React from "react";
 import { SIDEBAR_WIDTH } from "../../constants";
 
-// type AppBarProps = {
-//   children?: React.ReactNode;
-// };
-
 interface AppBarProps extends MuiAppBarProps {}
 
 export function AppBar({ children, ...rest }: AppBarProps) {
@@ -24,9 +20,7 @@ export function AppBar({ children, ...rest }: AppBarProps) {
       {...rest}
     >
       <Toolbar
-        disableGutters
         sx={{
-          px: 2,
           justifyContent: "space-between",
           "& :only-child": { ml: "auto" },
         }}
