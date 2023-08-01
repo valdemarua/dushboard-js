@@ -4,7 +4,7 @@ import { createTheme, ThemeProvider as ThemeProvider$1 } from '@mui/material/sty
 import { blue, green } from '@mui/material/colors';
 
 const Page = ({ title, children }) => {
-    return (jsxs(Box, { sx: { p: 2 }, children: [title && jsx(Typography, { variant: "h2", children: title }), jsx("div", { children: children })] }));
+    return (jsxs(Box, { sx: { p: 2 }, children: [title && (jsx(Box, { sx: { mb: 2 }, children: jsx(Typography, { variant: "h2", children: title }) })), jsx(Box, { component: "main", children: children })] }));
 };
 
 function Layout({ sidebar, appbar, children, sidebarWidth = 220, }) {
@@ -59,8 +59,7 @@ function AppBar(_a) {
     return (jsx(AppBar$1, Object.assign({ position: "fixed", elevation: 0, sx: {
             ml: `${SIDEBAR_WIDTH}px`,
             width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
-        } }, rest, { children: jsx(Toolbar, { disableGutters: true, sx: {
-                px: 2,
+        } }, rest, { children: jsx(Toolbar, { sx: {
                 justifyContent: "space-between",
                 "& :only-child": { ml: "auto" },
             }, children: children }) })));

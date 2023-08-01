@@ -9,8 +9,12 @@ interface PageProps {
 const Page = ({ title, children }: PageProps) => {
   return (
     <Box sx={{ p: 2 }}>
-      {title && <Typography variant="h2">{title}</Typography>}
-      <div>{children}</div>
+      {title && (
+        <Box sx={{ mb: 2 }}>
+          <Typography variant="h2">{title}</Typography>
+        </Box>
+      )}
+      <Box component="main">{children}</Box>
     </Box>
   );
 };
