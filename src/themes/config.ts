@@ -119,5 +119,20 @@ export const themeConfig: ThemeOptions = {
         },
       },
     },
+    MuiInputBase: {
+      defaultProps: {
+        size: "small",
+      },
+    },
+    MuiCard: {
+      defaultProps: {
+        variant: "outlined",
+      },
+    },
+    MuiStack: {
+      defaultProps: {
+        spacing: 2,
+      },
+    },
   },
 };

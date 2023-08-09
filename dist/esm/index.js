@@ -169,6 +169,21 @@ const themeConfig = {
                 },
             },
         },
+        MuiInputBase: {
+            defaultProps: {
+                size: "small",
+            },
+        },
+        MuiCard: {
+            defaultProps: {
+                variant: "outlined",
+            },
+        },
+        MuiStack: {
+            defaultProps: {
+                spacing: 2,
+            },
+        },
     },
 };
 
