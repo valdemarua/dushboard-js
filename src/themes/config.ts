@@ -20,15 +20,6 @@ export const themeConfig: ThemeOptions = {
     primary: blue,
     secondary: green,
   },
-  // typography: {
-  //   fontSize: 15,
-  //   h3: {
-  //     fontSize: "1.20rem",
-  //     fontWeight: 500,
-  //     marginTop: "1rem",
-  //     marginBottom: "1rem",
-  //   },
-  // },
   typography: {
     h1: {
       fontSize: "2.25rem",
@@ -39,8 +30,8 @@ export const themeConfig: ThemeOptions = {
       },
     },
     h2: {
-      fontSize: "2rem",
-      fontWeight: 500,
+      fontSize: "1.875rem",
+      fontWeight: 600,
       letterSpacing: "0",
       "@media (max-width:600px)": {
         fontSize: "1.75rem",
@@ -48,7 +39,7 @@ export const themeConfig: ThemeOptions = {
     },
     h3: {
       fontSize: "1.5rem",
-      fontWeight: 500,
+      fontWeight: 600,
       letterSpacing: "-0.5px",
       "@media (max-width:600px)": {
         fontSize: "1.25rem",
