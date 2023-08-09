@@ -8,7 +8,7 @@ const Page = ({ title, children }) => {
 };
 
 function Layout({ sidebar, appbar, children, sidebarWidth = 220, }) {
-    return (jsxs(Box, { sx: { display: "flex" }, children: [sidebar && sidebar, jsxs(Box, { children: [appbar && appbar, appbar && jsx(Toolbar, {}), jsx(Box, { component: "main", children: children })] })] }));
+    return (jsxs(Box, { sx: { display: "flex" }, children: [sidebar && sidebar, jsxs(Box, { sx: { flex: 1 }, children: [appbar && appbar, appbar && jsx(Toolbar, {}), jsx(Box, { component: "main", children: children })] })] }));
 }
 
 function Sidebar({ children, logo, width = 220 }) {

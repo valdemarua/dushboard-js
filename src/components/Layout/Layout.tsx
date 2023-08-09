@@ -17,7 +17,7 @@ export function Layout({
   return (
     <Box sx={{ display: "flex" }}>
       {sidebar && sidebar}
-      <Box>
+      <Box sx={{ flex: 1 }}>
         {appbar && appbar}
         {appbar && <Toolbar />}
         <Box component="main">{children}</Box>
