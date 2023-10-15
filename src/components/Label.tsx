@@ -14,15 +14,19 @@ type LabelProps = {
 };
 
 const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
-  const styles: { py: number; fontSize?: number } = { py: 0.25 };
+  const styles: { px: number; fontSize?: number; height?: number } = {
+    px: 1,
+    height: 32,
+  };
 
   if (size === "small") {
-    styles.py = 0.25;
+    styles.px = 0.25;
     styles.fontSize = 12;
+    styles.height = 24;
   }
 
   if (size === "large") {
-    styles.py = 0.5;
+    styles.px = 1.25;
   }
 
   const textColor = () => {
@@ -42,7 +46,8 @@ const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
       component="span"
       sx={{
         ...styles,
-        textAlign: "center",
+        display: "inline-flex",
+        alignItems: "center",
         px: 1,
         borderRadius: 1,
         textTransform: "capitalize",
