@@ -15,16 +15,17 @@ type LabelProps = {
 
 const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
   const styles: { px: number; fontSize?: number; height?: number } = {
-    px: 1,
+    px: 1.25,
     height: 24,
   };
 
   if (size === "small") {
+    styles.px = 1;
     styles.fontSize = 12;
   }
 
   if (size === "large") {
-    styles.px = 1.25;
+    styles.px = 1.5;
     styles.height = 32;
   }
 
