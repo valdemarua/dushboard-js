@@ -10,15 +10,19 @@ type LabelProps = {
     | "warning"
     | "error"
     | "grey";
-  size?: "small" | "medium";
+  size?: "small" | "medium" | "large";
 };
 
 const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
-  const styles: { py: number; fontSize?: number } = { py: 0.5 };
+  const styles: { py: number; fontSize?: number } = { py: 0.25 };
 
   if (size === "small") {
     styles.py = 0.25;
     styles.fontSize = 12;
+  }
+
+  if (size === "large") {
+    styles.py = 0.5;
   }
 
   const textColor = () => {

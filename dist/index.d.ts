@@ -12,7 +12,7 @@ declare const Page: ({ title, children }: PageProps) => react_jsx_runtime.JSX.El
 type LabelProps = {
     label: string;
     color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "grey";
-    size?: "small" | "medium";
+    size?: "small" | "medium" | "large";
 };
 declare const Label: ({ label, color, size }: LabelProps) => react_jsx_runtime.JSX.Element;
 
