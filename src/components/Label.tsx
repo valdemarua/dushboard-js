@@ -20,7 +20,6 @@ const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
   };
 
   if (size === "small") {
-    styles.px = 0.25;
     styles.fontSize = 12;
   }
 

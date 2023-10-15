@@ -13,7 +13,6 @@ const Label = ({ label, color = "grey", size = "medium" }) => {
         height: 24,
     };
     if (size === "small") {
-        styles.px = 0.25;
         styles.fontSize = 12;
     }
     if (size === "large") {
