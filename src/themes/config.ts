@@ -21,6 +21,7 @@ export const themeConfig: ThemeOptions = {
     secondary: green,
   },
   typography: {
+    fontSize: 13,
     h1: {
       fontSize: "2.25rem",
       fontWeight: 600,
@@ -90,6 +91,9 @@ export const themeConfig: ThemeOptions = {
     button: {
       textTransform: "capitalize",
     },
+  },
+  shape: {
+    borderRadius: 5,
   },
   components: {
     MuiButtonBase: {
