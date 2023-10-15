@@ -16,17 +16,17 @@ type LabelProps = {
 const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
   const styles: { px: number; fontSize?: number; height?: number } = {
     px: 1,
-    height: 32,
+    height: 24,
   };
 
   if (size === "small") {
     styles.px = 0.25;
     styles.fontSize = 12;
-    styles.height = 24;
   }
 
   if (size === "large") {
     styles.px = 1.25;
+    styles.height = 32;
   }
 
   const textColor = () => {
@@ -48,7 +48,6 @@ const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
         ...styles,
         display: "inline-flex",
         alignItems: "center",
-        px: 1,
         borderRadius: 1,
         textTransform: "capitalize",
         color: textColor(),

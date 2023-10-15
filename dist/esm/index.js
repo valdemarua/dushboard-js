@@ -10,15 +10,15 @@ const Page = ({ title, children }) => {
 const Label = ({ label, color = "grey", size = "medium" }) => {
     const styles = {
         px: 1,
-        height: 32,
+        height: 24,
     };
     if (size === "small") {
         styles.px = 0.25;
         styles.fontSize = 12;
-        styles.height = 24;
     }
     if (size === "large") {
         styles.px = 1.25;
+        styles.height = 32;
     }
     const textColor = () => {
         return color === "grey"
@@ -30,7 +30,7 @@ const Label = ({ label, color = "grey", size = "medium" }) => {
             ? (theme) => theme.palette.grey[100]
             : (theme) => lighten(theme.palette[color].main, 0.9);
     };
-    return (jsx(Box, { component: "span", sx: Object.assign(Object.assign({}, styles), { display: "inline-flex", alignItems: "center", px: 1, borderRadius: 1, textTransform: "capitalize", color: textColor(), bgcolor: bgColor() }), children: label }));
+    return (jsx(Box, { component: "span", sx: Object.assign(Object.assign({}, styles), { display: "inline-flex", alignItems: "center", borderRadius: 1, textTransform: "capitalize", color: textColor(), bgcolor: bgColor() }), children: label }));
 };
 
 function Layout({ sidebar, appbar, children, sidebarWidth = 220, }) {
