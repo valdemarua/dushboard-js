@@ -10,9 +10,17 @@ type LabelProps = {
     | "warning"
     | "error"
     | "grey";
+  size?: "small" | "medium";
 };
 
-const Label = ({ label, color = "grey" }: LabelProps) => {
+const Label = ({ label, color = "grey", size = "medium" }: LabelProps) => {
+  const styles: { py: number; fontSize?: number } = { py: 0.5 };
+
+  if (size === "small") {
+    styles.py = 0.25;
+    styles.fontSize = 12;
+  }
+
   const textColor = () => {
     return color === "grey"
       ? (theme: any) => theme.palette.grey
@@ -29,9 +37,9 @@ const Label = ({ label, color = "grey" }: LabelProps) => {
     <Box
       component="span"
       sx={{
+        ...styles,
         textAlign: "center",
         px: 1,
-        py: 0.5,
         borderRadius: 1,
         textTransform: "capitalize",
         color: textColor(),
