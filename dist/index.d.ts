@@ -9,6 +9,12 @@ interface PageProps {
 }
 declare const Page: ({ title, children }: PageProps) => react_jsx_runtime.JSX.Element;
 
+type LabelProps = {
+    label: string;
+    color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "grey";
+};
+declare const Label: ({ label, color }: LabelProps) => react_jsx_runtime.JSX.Element;
+
 type LayoutProps = {
     children?: React.ReactNode;
     sidebar?: JSX.Element;
@@ -47,4 +53,4 @@ declare module "@mui/material/styles" {
 }
 declare const themeConfig: ThemeOptions;
 
-export { AppBar, Layout, Page, Sidebar, ThemeProvider, themeConfig };
+export { AppBar, Label, Layout, Page, Sidebar, ThemeProvider, themeConfig };

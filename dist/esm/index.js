@@ -1,10 +1,32 @@
 import { jsxs, jsx } from 'react/jsx-runtime';
-import { Box, Typography, Toolbar, Drawer, AppBar as AppBar$1 } from '@mui/material';
+import { Box, Typography, lighten, Toolbar, Drawer, AppBar as AppBar$1 } from '@mui/material';
 import { createTheme, ThemeProvider as ThemeProvider$1 } from '@mui/material/styles';
 import { blue, green } from '@mui/material/colors';
 
 const Page = ({ title, children }) => {
     return (jsxs(Box, { sx: { p: 2 }, children: [title && (jsx(Box, { sx: { mb: 2 }, children: jsx(Typography, { variant: "h2", children: title }) })), jsx(Box, { component: "main", children: children })] }));
+};
+
+const Label = ({ label, color = "grey" }) => {
+    const textColor = () => {
+        return color === "grey"
+            ? (theme) => theme.palette.grey
+            : (theme) => theme.palette[color].main;
+    };
+    const bgColor = () => {
+        return color === "grey"
+            ? (theme) => theme.palette.grey[100]
+            : (theme) => lighten(theme.palette[color].main, 0.9);
+    };
+    return (jsx(Box, { component: "span", sx: {
+            textAlign: "center",
+            px: 1,
+            py: 0.5,
+            borderRadius: 1,
+            textTransform: "capitalize",
+            color: textColor(),
+            bgcolor: bgColor(),
+        }, children: label }));
 };
 
 function Layout({ sidebar, appbar, children, sidebarWidth = 220, }) {
@@ -183,5 +205,5 @@ function ThemeProvider({ children }) {
     return jsx(ThemeProvider$1, { theme: theme, children: children });
 }
 
-export { AppBar, Layout, Page, Sidebar, ThemeProvider, themeConfig };
+export { AppBar, Label, Layout, Page, Sidebar, ThemeProvider, themeConfig };
 //# sourceMappingURL=index.js.map

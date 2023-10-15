@@ -12,7 +12,7 @@ type LabelProps = {
     | "grey";
 };
 
-export const Label = ({ label, color = "grey" }: LabelProps) => {
+const Label = ({ label, color = "grey" }: LabelProps) => {
   const textColor = () => {
     return color === "grey"
       ? (theme: any) => theme.palette.grey
@@ -42,3 +42,5 @@ export const Label = ({ label, color = "grey" }: LabelProps) => {
     </Box>
   );
 };
+
+export default Label;
